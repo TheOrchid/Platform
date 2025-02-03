@@ -22,6 +22,7 @@ abstract class Tabs extends Layout
      */
     protected $variables = [
         'activeTab'    => null,
+        'labels'       => [],
     ];
 
     /**
@@ -48,6 +49,16 @@ abstract class Tabs extends Layout
     public function activeTab(string $name)
     {
         $this->variables['activeTab'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function labels(array $labels)
+    {
+        $this->variables['labels'] = $labels;
 
         return $this;
     }

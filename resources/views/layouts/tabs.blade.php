@@ -20,7 +20,7 @@
                         aria-selected="false"
                         role="tab"
                         data-bs-toggle="tab">
-                        {!! $name !!}
+                        {!! $labels[$name] ?? $name !!}
                     </a>
                 </li>
             @endforeach
